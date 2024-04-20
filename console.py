@@ -127,7 +127,7 @@ class HBNBCommand(cmd.Cmd):
         if class_name not in HBNBCommand.classes:
             print("** class doesn't exist **")
             return
-        
+
         # Get the class type from the classes dictionary
         class_type = HBNBCommand.classes[class_name]
 
@@ -143,10 +143,10 @@ class HBNBCommand(cmd.Cmd):
             key, value = key_value
             # Replace underscores with spaces in key
             key = key.replace('_', ' ')
-            
+
             # Handle string values
             if value.startswith('"') and value.endswith('"'):
-                value = value[1:-1].replace('\\"', '"')  # Remove quotes and unescape double quotes
+                value = value[1:-1].replace('\\"', '"')
 
                 # Convert to appropriate type
                 if '.' in value:
@@ -177,8 +177,6 @@ class HBNBCommand(cmd.Cmd):
 
             print(new_instance.id)
 
-
-            
     def help_create(self):
         """ Help information for the create method """
         print("Creates a class of any type")
@@ -372,6 +370,7 @@ class HBNBCommand(cmd.Cmd):
         """ Help info for the update class """
         print("Updates an object with new information")
         print("Usage: update <className> <id> <attName> <attVal>\n")
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
