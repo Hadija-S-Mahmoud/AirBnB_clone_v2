@@ -17,6 +17,7 @@ if getenv('HBNB_TYPE_STORAGE') == 'db':
 classes = {"User": User, "State": State, "City": City,
            "Amenity": Amenity, "Place": Place, "Review": Review}
 
+
 class DBStorage:
     """Db storage engine for mysql storage"""
     __engine = None

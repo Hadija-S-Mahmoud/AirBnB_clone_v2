@@ -5,6 +5,7 @@ from models import storage_type
 from sqlalchemy import Column, String, ForeignKey
 from sqlalchemy.orm import relationship
 
+
 class City(BaseModel):
     """ contains state ID and name """
     __tablespace__ = 'cities'

@@ -6,6 +6,7 @@ from models.city import City
 from sqlalchemy import Column, String
 from sqlalchemy.orm import relationship
 
+
 class State(BaseModel, Base):
     """ State class """
     __tablename__ = 'states'
@@ -15,6 +16,7 @@ class State(BaseModel, Base):
                               cascade='all, delete, delete-orphan')
     else:
         name = ""
+
         @property
         def cities(self):
             """ret a list of City instances with state_id

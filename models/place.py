@@ -20,7 +20,8 @@ if storage_type == 'db':
                                  primary_key=True,
                                  nullable=False)
                           )
-    
+
+
 class Place(BaseModel):
     """ A place to stay """
     __tablename__ = 'places'
@@ -74,7 +75,7 @@ class Place(BaseModel):
 
         @amenities.setter
         def amenities(self, obj):
-            """method for adding an Amenity.id to the 
+            """method for adding an Amenity.id to the
             attrbte amenities_ids"""
             if obj is not None:
                 if isinstance not in self.amenity_ids:
